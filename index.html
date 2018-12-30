@@ -25,24 +25,6 @@
             width:15vw;
         }
     </style>
-    <script>
-        let obj;
-        var movie_details = [{
-
-            "movieName": "Pirates of the carribean",
-            "ticketPrice": 1200
-        }, {
-            "movieName": "Inglorious Basterds",
-            "ticketPrice": 1400
-        }, {
-            "movieName": "Taxi Driver",
-            "ticketPrice": 15000
-        }]
-        function getMovie()
-        {
-            return this.movieName;
-        }
-    </script>
 </head>
 
 <body>
@@ -61,7 +43,7 @@
                     <p>You have selected:</p>
                     <p ng-show="var1" style="font-size:50px;">Pirates of the Carribean</p>
                     <p ng-show="var2" style="font-size:50px;">Inglorious Basterds</p>
-                    <p ng-show="var3" style="font-size:50px;">Taxi Driver</p>
+                    <p ng-show="var3" style="font-size:20px;">Taxi Driver</p>
                     <br><br>
                 </div>
                 <div class="col-md-4 offset-md-2" style="border:5px solid purple;border-radius:5px 5px; box-shadow: 1.5px 1.5px 6px 6px grey;">
@@ -70,10 +52,10 @@
                     <input class="input-box" type="text" placeholder="enter name" ng-model="name"><br><br>
                     <input class="input-box" type="number" placeholder="enter mobile" ng-model="number"><br><br>
                     <p>Please select the movie:</p>
-                    <label><input type="checkbox" name="movie1" ng-model="var1"> Pirates of
+                    <label><input type="checkbox" id="mov1" name="movie1" onclick="getMovie()" ng-model="var1"> Pirates of
                         the Carribean</label>
-                    <label><input type="checkbox" name="movie2" ng-model="var2">Inglorious Basterds</label>
-                    <label><input type="checkbox" name="movie3" ng-model="var3">Taxi Driver</label>
+                    <label><input type="checkbox" id="mov2" name="movie2" onclick="getMovie()" ng-model="var2">Inglorious Basterds</label>
+                    <label><input type="checkbox" id="mov3" name="movie3" onclick="getMovie()" ng-model="var3">Taxi Driver</label>
                 </div>
             </div>
         </div>
